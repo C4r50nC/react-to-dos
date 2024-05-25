@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
@@ -34,3 +36,9 @@ export default function TodoItem({ todo, removeTodo, toggleTodo }) {
     </ListItem>
   );
 }
+
+TodoItem.propTypes = {
+  todo: PropTypes.object,
+  removeTodo: PropTypes.func,
+  toggleTodo: PropTypes.func,
+};
