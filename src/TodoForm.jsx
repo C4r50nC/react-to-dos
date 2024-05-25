@@ -1,4 +1,5 @@
 import { useState } from "react";
+import PropTypes from "prop-types";
 
 import ListItem from "@mui/material/ListItem";
 import TextField from "@mui/material/TextField";
@@ -21,7 +22,7 @@ export default function TodoForm({ addTodo }) {
 
   return (
     <ListItem>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} id="new-todo" name="new-todo">
         <TextField
           id="add-todos-input"
           label="Add Todos"
@@ -42,3 +43,7 @@ export default function TodoForm({ addTodo }) {
     </ListItem>
   );
 }
+
+TodoForm.propTypes = {
+  addTodo: PropTypes.func,
+};
