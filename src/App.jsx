@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <CssBaseline />
-      <h1>To-dos</h1>
+      <Navbar />
       <TodoList />
     </>
   );
